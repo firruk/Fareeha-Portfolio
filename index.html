@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fareeha Zahrah — Creative Portfolio</title>
+  <meta name="description" content="Fareeha Zahrah — artist, graphic designer and writer. Marketing, content, social & design. Sydney, NSW." />
+  <meta property="og:title" content="Fareeha Zahrah — Creative Portfolio" />
+  <meta property="og:image" content="assets/img/zay.webp" />
+  <link rel="icon" href="assets/img/zay-small.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;700&family=Caveat:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="is-loading">
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__half loader__half--top"></div>
+    <div class="loader__half loader__half--bottom"></div>
+    <div class="loader__inner">
+      <img src="assets/img/zay-small.webp" alt="" class="loader__logo" />
+      <div class="loader__count"><span id="loaderCount">000</span><i>%</i></div>
+      <p class="loader__hint">mixing paint, sharpening pencils…</p>
+    </div>
+  </div>
+
+  <!-- ============ GLOBAL UI ============ -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><div class="cursor__ring"><span class="cursor__label"></span></div><div class="cursor__dot"></div></div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <header class="nav">
+    <a href="#top" class="nav__logo" data-cursor="hi!" aria-label="Back to top">
+      <img src="assets/img/zay-small.webp" alt="Zay logo" />
+    </a>
+    <div class="nav__chapter" aria-live="polite">
+      <span class="nav__chapter-num" id="chapterNum">00</span>
+      <span class="nav__chapter-name" id="chapterName">hello</span>
+    </div>
+    <button class="nav__menu" id="menuBtn" data-cursor="open" aria-expanded="false" aria-controls="menu">
+      <span>menu</span><i></i><i></i>
+    </button>
+  </header>
+
+  <!-- rooms discovered tracker -->
+  <div class="rooms" id="rooms" aria-label="Rooms discovered">
+    <span class="rooms__label">rooms found</span>
+    <div class="rooms__dots"></div>
+    <span class="rooms__count"><b id="roomsCount">0</b>/8</span>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+
+  <nav class="menu" id="menu" aria-hidden="true">
+    <div class="menu__bg"></div>
+    <div class="menu__preview"><img alt="" /></div>
+    <ul class="menu__list">
+      <li><a href="#about" data-img="assets/img/mug.webp"><em>00</em>about me</a></li>
+      <li><a href="#journey" data-img="assets/img/portrait.webp"><em>00</em>work journey</a></li>
+      <li><a href="#posters" data-img="assets/img/p-iftar.webp"><em>01</em>poster design</a></li>
+      <li><a href="#logos" data-img="assets/img/zay.webp"><em>02</em>logo design</a></li>
+      <li><a href="#product" data-img="assets/img/caps.webp"><em>03</em>product design</a></li>
+      <li><a href="#social" data-img="assets/img/obr-3.webp"><em>04</em>social media</a></li>
+      <li><a href="#inktober" data-img="assets/img/ink-tiger.webp"><em>05</em>inktober</a></li>
+      <li><a href="#photography" data-img="assets/img/ph-flower.webp"><em>06</em>photography</a></li>
+      <li><a href="#paintings" data-img="assets/img/art-turban.webp"><em>07</em>digital paintings</a></li>
+      <li><a href="#additional" data-img="assets/img/add-peak.webp"><em>08</em>additional works</a></li>
+      <li><a href="#contact" data-img="assets/img/hand.webp"><em>✶</em>say hello</a></li>
+    </ul>
+    <p class="menu__foot">zahrahbiju@gmail.com — Sydney, NSW</p>
+  </nav>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero" data-chapter="00|hello">
+      <canvas class="stars" id="stars"></canvas>
+      <div class="hero__portrait" data-cursor="that's me">
+        <img src="assets/img/sun.webp" alt="" class="hero__sun" />
+        <div class="hero__oval"><img src="assets/img/portrait.webp" alt="Portrait of Fareeha Zahrah" /></div>
+        <img src="assets/img/zay-small.webp" alt="" class="hero__zay" />
+      </div>
+      <h1 class="hero__title">
+        <span class="line"><span class="split">fareeha</span></span>
+        <span class="line"><span class="split">zahrah<b class="red">.</b></span></span>
+        <svg class="hero__loop" viewBox="0 0 600 260" aria-hidden="true"><path d="M30 150 C 40 40, 420 10, 560 90 C 640 140, 520 240, 300 235 C 120 230, 10 190, 60 120" /></svg>
+      </h1>
+      <div class="ransom" aria-label="Creative Portfolio">
+        <div class="ransom__word" data-word="creative"></div>
+        <div class="ransom__word" data-word="portfolio"></div>
+      </div>
+      <p class="hero__roles">artist <i>✶</i> graphic designer <i>✶</i> writer <i>✶</i> marketer</p>
+      <a href="#contact" class="hero__cta magnetic" data-cursor="let's talk"><span>↳ work with me today</span></a>
+      <div class="hero__scroll"><span>scroll — there's more than one of me</span><i></i></div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee marquee--red" aria-hidden="true">
+      <div class="marquee__track">
+        <span>design ✶ illustration ✶ content ✶ social ✶ photography ✶ oil paint ✶ copy ✶ brand ✶ coffee ✶ </span>
+        <span>design ✶ illustration ✶ content ✶ social ✶ photography ✶ oil paint ✶ copy ✶ brand ✶ coffee ✶ </span>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about" data-chapter="00|about me">
+      <div class="about__text">
+        <h2 class="h-section"><span class="split">about me</span><img src="assets/img/sparks.webp" alt="" class="about__sparks" /></h2>
+        <p class="reveal-words">I'm an artist, graphic designer and writer with an educational background in media and communication and 4+ years of experience across design and marketing.</p>
+        <p class="reveal-words">I find it awfully limiting to define myself with a singular identity, so you'll find <em>bits and pieces of everything</em> in this portfolio.</p>
+        <p class="reveal-words">In my free time, you'll find me with a good cup of coffee, hunched over an oil painting or scribbling away in my journal.</p>
+      </div>
+      <div class="about__media">
+        <div class="about__oval" data-cursor="coffee?"><img src="assets/img/mug.webp" alt="Silhouette of a hand holding a coffee mug against a window" /></div>
+        <img src="assets/img/scribble-smile.webp" alt="" class="about__smile" />
+        <div class="dots" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ============ NUMBERS ============ -->
+    <section class="numbers" data-chapter="00|in numbers">
+      <p class="eyebrow">a few receipts —</p>
+      <div class="numbers__grid">
+        <div class="stat"><b data-count="6">0</b><span>brands managed at once at Durablend — from skincare to industrial machinery</span></div>
+        <div class="stat"><b data-count="15">0</b><span>concurrent client accounts at Brandshake</span></div>
+        <div class="stat"><b data-count="30" data-suffix="%">0</b><span>rise in brand visibility after a TikTok &amp; Instagram revamp</span></div>
+        <div class="stat"><b data-count="20" data-suffix="%">0</b><span>more attendees at international conferences in Dubai</span></div>
+        <div class="stat"><b data-count="40" data-suffix="+">0</b><span>SEO articles written, lifting engagement by 20%</span></div>
+      </div>
+    </section>
+
+    <!-- ============ BACKGROUND ============ -->
+    <section class="background" id="background" data-chapter="00|my background">
+      <svg class="background__lines" viewBox="0 0 800 400" aria-hidden="true">
+        <path d="M0 80 C 200 20, 300 200, 500 120 S 760 40, 800 160" />
+        <path d="M0 140 C 220 80, 320 260, 520 180 S 760 100, 800 220" />
+        <path d="M0 200 C 240 140, 340 320, 540 240 S 760 160, 800 280" />
+      </svg>
+      <h2 class="h-section"><span class="split">my background</span></h2>
+      <div class="background__cols">
+        <div>
+          <p class="label">↳ education</p>
+          <ul class="edu">
+            <li><b>MA Journalism &amp; Mass Communication</b><span>Amity University · 2021–24</span></li>
+            <li><b>BA English Literature &amp; Communication Studies</b><span>Mahatma Gandhi University · 2018–21</span></li>
+            <li><b>Diploma, Graphic Design &amp; Animation</b><span>National Skill Development Centre · 2019–21</span></li>
+            <li><b>CBSE</b><span>Our Own English High School, Sharjah · 2018</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="label">↳ skills &amp; values</p>
+          <ul class="values">
+            <li>Graphic design &amp; illustration</li><li>Photography &amp; editing</li><li>Content &amp; copywriting</li>
+            <li>Social media strategy</li><li>Creative problem-solving</li><li>Earnest, effective communication</li>
+            <li>Honesty, empathy &amp; adaptability</li><li>Personal growth &amp; learning</li><li>Authenticity</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ JOURNEY (horizontal) ============ -->
+    <section class="journey" id="journey" data-chapter="00|work journey">
+      <div class="journey__pin">
+        <div class="journey__head">
+          <h2 class="h-section"><span class="split">my work journey</span></h2>
+          <img src="assets/img/st-laptop.webp" alt="" class="journey__laptop" />
+        </div>
+        <div class="journey__track">
+          <div class="journey__line"><span></span></div>
+          <article class="job" data-year="2019">
+            <div class="job__year"></div>
+            <h3>Graphic Designer &amp; Content Writer</h3>
+            <p class="job__at">Engage Sports · Dubai, UAE</p>
+            <p class="job__when">Sep 2019 — Jun 2021</p>
+            <p class="job__note">Designed 10 merchandise concepts for an annual badminton tournament, plus brochures, social assets and web copy.</p>
+          </article>
+          <article class="job" data-year="2021">
+            <div class="job__year"></div>
+            <h3>Content Writing Intern</h3>
+            <p class="job__at">CourseOne.io · Noida, India</p>
+            <p class="job__when">Dec 2021 — Mar 2022</p>
+            <p class="job__note">40+ SEO-optimised articles, contributing to a 20% lift in user engagement.</p>
+          </article>
+          <article class="job" data-year="2023">
+            <div class="job__year"></div>
+            <h3>Content Design Intern</h3>
+            <p class="job__at">Freight Systems · Dubai, UAE</p>
+            <p class="job__when">Jan 2023 — May 2023</p>
+            <p class="job__note">Redesigned 70+ flyers for an internal seminar series and ran the daily content calendar in Hootsuite.</p>
+          </article>
+          <article class="job" data-year="2023">
+            <div class="job__year"></div>
+            <h3>Social Media Marketing Intern</h3>
+            <p class="job__at">Coolmix · Dubai, UAE</p>
+            <p class="job__when">Jun 2023 — Dec 2023</p>
+            <p class="job__note">Revamped TikTok &amp; Instagram — a 30% increase in brand visibility.</p>
+          </article>
+          <article class="job" data-year="2024">
+            <div class="job__year"></div>
+            <h3>Digital Marketing Executive</h3>
+            <p class="job__at">CIDBI · Kerala, India</p>
+            <p class="job__when">Feb 2024 — Aug 2024</p>
+            <p class="job__note">Promo materials for international conferences in Dubai — 20% more attendees.</p>
+          </article>
+          <article class="job" data-year="2025">
+            <div class="job__year"></div>
+            <h3>Marketing Executive</h3>
+            <p class="job__at">Durablend · Sydney, NSW</p>
+            <p class="job__when">May 2025 — Feb 2026</p>
+            <p class="job__note">Marketing &amp; design for 6 sister brands at once, including Madame Korner and Klausen Trading.</p>
+          </article>
+          <article class="job" data-year="2026">
+            <div class="job__year"></div>
+            <h3>Graphic Designer (Contract)</h3>
+            <p class="job__at">Brandshake · Sydney, NSW</p>
+            <p class="job__when">Mar 2026 — Apr 2026</p>
+            <p class="job__note">End-to-end design across 15 simultaneous client accounts — finance, F&amp;B, travel and more.</p>
+          </article>
+          <article class="job job--next">
+            <h3 class="job__next">what's next?<br /><em>maybe you.</em></h3>
+            <a href="#contact" class="link-arrow" data-cursor="hire">↳ let's find out</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERTISE (sticker board) ============ -->
+    <section class="expertise" id="expertise" data-chapter="00|my expertise">
+      <div class="expertise__left">
+        <h2 class="h-section"><span class="split">my expertise</span></h2>
+        <div class="tools">
+          <div class="tool tool--ps"><b>Ps</b><span>Photoshop</span></div>
+          <div class="tool tool--ai"><b>Ai</b><span>Illustrator</span></div>
+          <div class="tool tool--pr"><b>Pr</b><span>Premiere Pro</span></div>
+          <div class="tool tool--id"><b>Id</b><span>InDesign</span></div>
+        </div>
+        <p class="tools__more">along with <span>Figma</span>, <span>Canva</span>, <span>Affinity</span>, <span>CorelDraw</span>, <span>CapCut</span>, <span>Klaviyo</span>, <span>HubSpot</span>, <span>Hootsuite</span>, <span>Shopify</span>, <span>WordPress</span> &amp; <span>Webflow</span></p>
+        <p class="hand-note">psst — the stickers move. go on, rearrange my brain →</p>
+      </div>
+      <div class="board" id="board" data-cursor="drag">
+        <img src="assets/img/st-creativity.webp" alt="Creativity badge sticker" style="--x:10%;--y:2%;--r:-8deg;--w:17%" />
+        <img src="assets/img/st-branding.webp" alt="Branding sticker" style="--x:40%;--y:4%;--r:-12deg;--w:30%" />
+        <img src="assets/img/st-heart.webp" alt="" style="--x:76%;--y:2%;--r:10deg;--w:12%" />
+        <img src="assets/img/st-social.webp" alt="Social media sticker" style="--x:30%;--y:24%;--r:-3deg;--w:30%" />
+        <img src="assets/img/st-oval.webp" alt="" style="--x:74%;--y:18%;--r:6deg;--w:16%" />
+        <img src="assets/img/st-corporate.webp" alt="Corporate communication sticker" style="--x:2%;--y:36%;--r:-6deg;--w:22%" />
+        <img src="assets/img/st-graphic.webp" alt="Graphic design sticker" style="--x:30%;--y:36%;--r:4deg;--w:28%" />
+        <img src="assets/img/st-burst.webp" alt="" style="--x:58%;--y:34%;--r:0deg;--w:12%" />
+        <img src="assets/img/st-content.webp" alt="Content writing sticker" style="--x:70%;--y:40%;--r:5deg;--w:20%" />
+        <img src="assets/img/st-logo.webp" alt="Logo design sticker" style="--x:2%;--y:64%;--r:-10deg;--w:20%" />
+        <img src="assets/img/st-illustration.webp" alt="Illustration sticker" style="--x:24%;--y:62%;--r:-18deg;--w:26%" />
+        <img src="assets/img/st-flower.webp" alt="" style="--x:55%;--y:60%;--r:8deg;--w:10%" />
+        <img src="assets/img/st-copy.webp" alt="Copywriting sticker" style="--x:58%;--y:70%;--r:-2deg;--w:32%" />
+        <img src="assets/img/st-gear.webp" alt="" style="--x:16%;--y:84%;--r:12deg;--w:11%" />
+        <img src="assets/img/st-star.webp" alt="" style="--x:44%;--y:82%;--r:0deg;--w:12%" />
+      </div>
+    </section>
+
+    <!-- ============ INTERLUDE ============ -->
+    <section class="interlude" id="interlude" data-chapter="00|a confession">
+      <div class="interlude__pin">
+        <div class="interlude__media"><img src="assets/img/hand.webp" alt="A paint-covered hand reaching towards the sky" /></div>
+        <p class="interlude__text">
+          <span class="line"><span>When I'm in a</span></span>
+          <span class="line"><span>room full of <b class="art">ART</b>,</span></span>
+          <span class="line"><span>finished or otherwise,</span></span>
+          <span class="line"><span>I feel <em>so alive.</em></span></span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ INDEX OF ROOMS ============ -->
+    <section class="doors" id="doors" data-chapter="00|the rooms">
+      <div class="doors__head">
+        <p class="eyebrow">eight rooms, one restless mind</p>
+        <h2 class="h-section"><span class="split">pick a door</span></h2>
+        <p class="doors__sub">…or just keep scrolling. every room hides something different.</p>
+      </div>
+      <div class="doors__grid">
+        <a class="door" href="#posters" data-cursor="enter"><i>1</i><span>poster<br />design</span></a>
+        <a class="door" href="#logos" data-cursor="enter"><i>2</i><span>logo<br />design</span></a>
+        <a class="door" href="#product" data-cursor="enter"><i>3</i><span>product<br />design</span></a>
+        <a class="door" href="#social" data-cursor="enter"><i>4</i><span>social<br />media</span></a>
+        <a class="door door--dark" href="#inktober" data-cursor="enter"><i>5</i><span>inktober</span></a>
+        <a class="door door--dark" href="#photography" data-cursor="enter"><i>6</i><span>photo<br />graphy</span></a>
+        <a class="door door--dark" href="#paintings" data-cursor="enter"><i>7</i><span>digital<br />paintings</span></a>
+        <a class="door door--dark" href="#additional" data-cursor="enter"><i>8</i><span>additional<br />works</span></a>
+      </div>
+    </section>
+
+    <!-- ============ 01 POSTERS ============ -->
+    <section class="room posters" id="posters" data-room="1" data-chapter="01|poster design">
+      <div class="posters__pin">
+        <header class="room__head">
+          <span class="room__num">01</span>
+          <h2 class="h-room"><span class="split">poster design</span></h2>
+          <p class="room__desc">My most recent work — vibrant posters built on design principles and specific colour palettes.</p>
+        </header>
+        <div class="posters__track">
+          <figure class="poster tilt" data-cursor="view"><img src="assets/img/p-iftar.webp" alt="AMIA NSW Iftar flyer" /><figcaption>A4 flyer — AMIA NSW, community iftar</figcaption></figure>
+          <figure class="poster tilt" data-cursor="view"><img src="assets/img/p-quran.webp" alt="Monthly Quran class flyer" /><figcaption>A4 flyer — AMIA NSW, monthly Quran class</figcaption></figure>
+          <figure class="poster tilt" data-cursor="view"><img src="assets/img/p-taharah.webp" alt="Essence of Taharah Quran class flyer" /><figcaption>A4 flyer — AMIA NSW, "essence of taharah"</figcaption></figure>
+          <figure class="poster tilt" data-cursor="view"><img src="assets/img/p-radiance.webp" alt="Madame Korner A Legacy of Radiance poster" /><figcaption>A1 poster — Madame Korner skincare</figcaption></figure>
+          <figure class="poster tilt" data-cursor="view"><img src="assets/img/p-craft.webp" alt="Madame Korner skincare craftsmanship poster" /><figcaption>A5 poster — Madame Korner skincare</figcaption></figure>
+          <figure class="poster tilt" data-cursor="view"><img src="assets/img/p-1975.webp" alt="The 1975 tour poster" /><figcaption>personal project — The 1975</figcaption></figure>
+          <figure class="poster tilt" data-cursor="view"><img src="assets/img/p-daydream.webp" alt="Seventeen You Make My Day poster" /><figcaption>personal project — "you make my day"</figcaption></figure>
+          <figure class="poster tilt" data-cursor="view"><img src="assets/img/p-peace.webp" alt="Peace Patience Persistence typographic poster" /><figcaption>personal project — peace, patience, persistence</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 LOGOS ============ -->
+    <section class="room logos" id="logos" data-room="2" data-chapter="02|logo design">
+      <header class="room__head">
+        <span class="room__num">02</span>
+        <h2 class="h-room"><span class="split">logo design</span></h2>
+      </header>
+      <div class="zay">
+        <div class="zay__copy">
+          <p class="zay__lead">This is a logo I made for my personal branding — <b>'Zay'</b>, a name I go by online, derived from my middle name Zahrah.</p>
+          <ul class="arrow-list">
+            <li>Heavily influenced by my faith, family and upbringing in the Middle East.</li>
+            <li>Reads <em>Zay</em> in Arabic, inspired by the grace, flow and elegance of the Arabic calligraphy I grew up admiring.</li>
+            <li>Originally sketched out on paper to physically sign finished artworks.</li>
+          </ul>
+        </div>
+        <div class="zay__stage" data-cursor="زي">
+          <div class="zay__grid"></div>
+          <svg class="zay__arrow" viewBox="0 0 300 160" aria-hidden="true"><path d="M10 60 C 80 0, 200 0, 270 120" /><path d="M240 110 L 272 124 L 280 88" /></svg>
+          <img src="assets/img/zay.webp" alt="Zay personal logo in Arabic calligraphy" class="zay__logo" />
+          <span class="zay__word">Z A Y</span>
+        </div>
+      </div>
+      <p class="logos__intro">More marks, built on rhythm, pattern and white space. The shapes stay minimal and match what each company does, with simple colour theory on top. <span class="hand">(hover to flip)</span></p>
+      <div class="logos__grid">
+        <div class="flip"><div class="flip__in"><div class="flip__front"><img src="assets/img/logo-pulse.webp" alt="Pulse concept logo" /></div><div class="flip__back"><b>Pulse</b><span>concept logo</span><em>stacked cubes — a heartbeat built from blocks</em></div></div></div>
+        <div class="flip flip--dark"><div class="flip__in"><div class="flip__front"><img src="assets/img/logo-infinite.webp" alt="Infinite Sports Club logo" /></div><div class="flip__back"><b>Infinite Sports Club</b><span>client logo</span><em>a swimmer in an infinity loop</em></div></div></div>
+        <div class="flip"><div class="flip__in"><div class="flip__front"><img src="assets/img/logo-blooper.webp" alt="Blooper concept logo" /></div><div class="flip__back"><b>Blooper</b><span>concept logo</span><em>stripes that bend like a film reel</em></div></div></div>
+        <div class="flip flip--dark"><div class="flip__in"><div class="flip__front"><img src="assets/img/logo-display.webp" alt="Display logo option" /></div><div class="flip__back"><b>Display</b><span>logo option</span><em>play button, spectrum gradient</em></div></div></div>
+      </div>
+    </section>
+
+    <!-- ============ 03 PRODUCT ============ -->
+    <section class="room product" id="product" data-room="3" data-chapter="03|product design">
+      <header class="room__head">
+        <span class="room__num">03</span>
+        <h2 class="h-room"><span class="split">product design</span></h2>
+        <p class="room__desc">Infinite Sports Club needed custom sportswear for its members: sports jerseys and swim caps, sleek and comfortable and true to the brand.</p>
+      </header>
+      <div class="product__stage">
+        <div class="product__spot"></div>
+        <img src="assets/img/jerseys.webp" alt="Infinite Sports Club jersey designs, front, back and sides" class="product__jerseys" />
+      </div>
+      <div class="product__caps">
+        <img src="assets/img/caps.webp" alt="Four swim cap designs with logo variants" data-cursor="spin" />
+        <p class="hand">↳ with logo variants. (give them a spin)</p>
+      </div>
+    </section>
+
+    <!-- ============ 04 SOCIAL ============ -->
+    <section class="room social" id="social" data-room="4" data-chapter="04|social media">
+      <header class="room__head">
+        <span class="room__num">04</span>
+        <h2 class="h-room"><span class="split">social media</span></h2>
+        <p class="room__desc">Social media strategy and video/image content, including freelance work for several UAE brands.</p>
+      </header>
+
+      <div class="brand">
+        <div class="brand__file">
+          <p><span>brand</span>OBR, Original Burger Restaurant</p>
+          <p><span>where</span>Abu Dhabi, UAE</p>
+          <p class="hand">tap the stack ↓</p>
+        </div>
+        <div class="stack" data-cursor="shuffle">
+          <img src="assets/img/obr-3.webp" alt="OBR burger post" />
+          <img src="assets/img/obr-2.webp" alt="OBR logo on crumpled paper" />
+          <img src="assets/img/obr-1.webp" alt="OBR we are ready to serve you post" />
+        </div>
+        <div class="brand__file">
+          <p><span>brand</span>ZOE Modern Greek Kouzina</p>
+          <p><span>where</span>Dubai, UAE</p>
+        </div>
+        <div class="duo">
+          <img src="assets/img/zoe-1.webp" alt="ZOE plated dish post" class="parallax" data-speed="-0.1" />
+          <img src="assets/img/zoe-2.webp" alt="ZOE skillet dish post" class="parallax" data-speed="0.12" />
+        </div>
+      </div>
+
+      <div class="brand brand--mk">
+        <div class="brand__file brand__file--big">
+          <p><span>brand</span>Madame Korner</p>
+          <p><span>type</span>Classic skincare</p>
+          <p><span>brief</span>Elegant, timeless products for an older female audience. Australian made &amp; owned.</p>
+          <p><span>where</span>Sydney, NSW</p>
+        </div>
+        <div class="phones">
+          <div class="phone"><video src="assets/video/mk-starter.mp4" poster="assets/video/mk-starter.webp" muted loop playsinline preload="none"></video></div>
+          <div class="phone phone--up"><video src="assets/video/mk-vitamin.mp4" poster="assets/video/mk-vitamin.webp" muted loop playsinline preload="none"></video></div>
+          <div class="phone"><video src="assets/video/mk-blackfriday.mp4" poster="assets/video/mk-blackfriday.webp" muted loop playsinline preload="none"></video></div>
+          <div class="phone phone--up"><video src="assets/video/mk-restore.mp4" poster="assets/video/mk-restore.webp" muted loop playsinline preload="none"></video></div>
+        </div>
+        <div class="mk-grid">
+          <img src="assets/img/mk-1.webp" alt="Madame Korner real beauty collagen post" data-cursor="view" />
+          <img src="assets/img/mk-2.webp" alt="Madame Korner benefits of collagen post" data-cursor="view" />
+          <img src="assets/img/mk-3.webp" alt="Madame Korner healthy skin is always in post" data-cursor="view" />
+          <img src="assets/img/mk-4.webp" alt="Madame Korner what's your skin type post" data-cursor="view" />
+        </div>
+        <p class="brand__note">Single and carousel product ads, audience-centred informative posts, and part of a multi-channel <b>Black Friday</b> campaign.</p>
+      </div>
+
+      <div class="brand brand--cm">
+        <div class="brand__file brand__file--big">
+          <p><span>brand</span>Coolmix (aka Mixglobal)</p>
+          <p><span>type</span>Telecommunication</p>
+          <p><span>brief</span>Modern, exciting technology and quality, aimed at a B2B audience. Short-form content and image posts for Instagram, TikTok, X, Facebook and LinkedIn.</p>
+        </div>
+        <div class="cm-row">
+          <div class="phone"><video src="assets/video/coolmix.mp4" poster="assets/video/coolmix.webp" muted loop playsinline preload="none"></video></div>
+          <img src="assets/img/cm-1.webp" alt="Coolmix unbox the future post" data-cursor="view" />
+          <img src="assets/img/cm-2.webp" alt="Coolmix elevate your pre-owned iPhone game post" data-cursor="view" />
+          <img src="assets/img/cm-3.webp" alt="Coolmix affordable tech post" data-cursor="view" />
+        </div>
+      </div>
+
+      <div class="brand brand--duo">
+        <div>
+          <div class="phone phone--wide"><video src="assets/video/tintlab.mp4" poster="assets/video/tintlab.webp" muted loop playsinline preload="none"></video></div>
+          <p class="cap">↳ freelance for <b>TINTLAB</b>, lifestyle gifts brand · Dubai</p>
+        </div>
+        <div>
+          <div class="phone phone--wide"><video src="assets/video/freight.mp4" poster="assets/video/freight.webp" muted loop playsinline preload="none"></video></div>
+          <p class="cap">↳ <b>Freight Systems</b>, logistics &amp; transportation · Dubai</p>
+        </div>
+      </div>
+
+      <!-- EDMs -->
+      <div class="edms" id="edms">
+        <div class="edms__head">
+          <h3 class="h-sub">edms</h3>
+          <p>EDM (Electronic Direct Mail) banners I designed for Australian skincare brand Madame Korner.</p>
+        </div>
+        <div class="edms__fan">
+          <img src="assets/img/edm-1.webp" alt="EOFY sale night creams EDM banner" data-cursor="view" />
+          <img src="assets/img/edm-2.webp" alt="See you at the 2025 Beauty Expo EDM banner" data-cursor="view" />
+          <img src="assets/img/edm-3.webp" alt="Join the Madame Korner family EDM banner" data-cursor="view" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05 INKTOBER ============ -->
+    <section class="room ink" id="inktober" data-room="5" data-chapter="05|inktober">
+      <div class="ink__head">
+        <span class="room__num">05</span>
+        <div class="ransom ransom--ink" aria-label="Inktober"><div class="ransom__word" data-word="inktober"></div></div>
+        <p class="room__desc">Inktober is a drawing challenge built on daily prompts, centred on the spooky month of October. These are digital artworks I made for it from 2020 to 2023. <a href="https://inktober.com" target="_blank" rel="noopener" data-cursor="↗">inktober.com</a></p>
+      </div>
+      <div class="film">
+        <div class="film__track">
+          <figure data-cursor="view"><img src="assets/img/ink-tiger.webp" alt="Inktober tiger" /></figure>
+          <figure data-cursor="view"><img src="assets/img/ink-cliff.webp" alt="Inktober tree on cliff under red sun" /></figure>
+          <figure data-cursor="view"><img src="assets/img/ink-bulb.webp" alt="Inktober daisies in a light bulb" /></figure>
+          <figure data-cursor="view"><img src="assets/img/ink-snake.webp" alt="Inktober coiled snake" /></figure>
+          <figure data-cursor="view"><img src="assets/img/ink-sword.webp" alt="Inktober sword" /></figure>
+          <figure data-cursor="view"><img src="assets/img/ink-peak.webp" alt="Inktober dark mountain with light" /></figure>
+          <figure data-cursor="view"><img src="assets/img/ink-hand.webp" alt="Inktober reaching hand" /></figure>
+          <figure data-cursor="view"><img src="assets/img/ink-spider.webp" alt="Inktober spiders on moon" /></figure>
+          <figure data-cursor="view"><img src="assets/img/ink-cloak.webp" alt="Inktober cloaked figure" /></figure>
+        </div>
+      </div>
+      <p class="ink__whisper">hover over the dark. it bleeds.</p>
+    </section>
+
+    <!-- ============ 06 PHOTOGRAPHY ============ -->
+    <section class="room photo" id="photography" data-room="6" data-chapter="06|photography">
+      <div class="photo__title">
+        <span class="room__num">06</span>
+        <h2 class="h-room h-room--paper"><span>photo</span><span>graphy</span></h2>
+        <p class="room__desc">Taken between 2022 and 2024. <span class="hand">They're loose on the table, so pick them up.</span></p>
+      </div>
+      <div class="table" id="table" data-cursor="drag">
+        <figure class="snap" style="--x:4%;--y:6%;--r:-7deg"><img src="assets/img/ph-koi.webp" alt="Koi fish under tree reflections" /><figcaption>♥ koi, reflected</figcaption></figure>
+        <figure class="snap" style="--x:24%;--y:30%;--r:5deg"><img src="assets/img/ph-flower.webp" alt="Frangipani tucked behind an ear" /><figcaption>♥ frangipani</figcaption></figure>
+        <figure class="snap" style="--x:43%;--y:2%;--r:-3deg"><img src="assets/img/ph-shadow.webp" alt="Shadow of a hand on a wall" /><figcaption>♥ shadow play</figcaption></figure>
+        <figure class="snap" style="--x:62%;--y:26%;--r:8deg"><img src="assets/img/ph-nonsense.webp" alt="Nonsense magazine on white sheets" /><figcaption>♥ nonsense</figcaption></figure>
+        <figure class="snap" style="--x:80%;--y:4%;--r:-6deg"><img src="assets/img/ph-skylight.webp" alt="Skylight windows" /><figcaption>♥ skylight</figcaption></figure>
+        <figure class="snap" style="--x:8%;--y:52%;--r:4deg"><img src="assets/img/ph-books.webp" alt="Books and a blue notebook" /><figcaption>♥ reading list</figcaption></figure>
+        <figure class="snap" style="--x:70%;--y:54%;--r:-4deg"><img src="assets/img/ph-night.webp" alt="Street at night" /><figcaption>♥ after hours</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ============ 07 PAINTINGS ============ -->
+    <section class="room gallery" id="paintings" data-room="7" data-chapter="07|digital paintings">
+      <header class="room__head">
+        <span class="room__num">07</span>
+        <h2 class="h-room"><span class="split">digital paintings</span></h2>
+        <p class="room__desc">Made using Adobe Photoshop and a Wacom One tablet.</p>
+        <button class="lights" id="lightsBtn" data-cursor="click" aria-pressed="false">💡 lights on</button>
+      </header>
+      <div class="gallery__room" id="galleryRoom">
+        <figure class="framed framed--gold" style="--l:11.3%;--r:12.7%;--t:9.4%;--b:10.5%">
+          <div class="framed__art"><img src="assets/img/art-turban.webp" alt="Girl in the Blue Turban, digital painting" /></div>
+          <img src="assets/img/frame-gold.webp" alt="" class="framed__frame" />
+          <figcaption class="plaque"><b>"Girl in the Blue Turban"</b>2023 · original artwork</figcaption>
+        </figure>
+        <figure class="framed framed--ornate" style="--l:13.6%;--r:13.4%;--t:15.4%;--b:15.5%">
+          <div class="framed__art"><img src="assets/img/art-italian.webp" alt="Italian Girl with Flowers, master study" /></div>
+          <img src="assets/img/frame-ornate.webp" alt="" class="framed__frame" />
+          <figcaption class="plaque"><b>"Italian Girl with Flowers"</b>after Joaquín Sorolla, 1886 · 2020 master study</figcaption>
+        </figure>
+        <figure class="framed framed--gilt" style="--l:11.2%;--r:11.6%;--t:10.7%;--b:10.8%">
+          <div class="framed__art"><img src="assets/img/art-cowboy.webp" alt="Portrait series number 8, man in a hat" /></div>
+          <img src="assets/img/frame-gilt.webp" alt="" class="framed__frame" />
+          <figcaption class="plaque"><b>"portrait series #8"</b>2025 · original artwork</figcaption>
+        </figure>
+        <figure class="framed framed--oval" style="--l:15.4%;--r:15.3%;--t:11%;--b:11%">
+          <div class="framed__art framed__art--oval"><img src="assets/img/art-statue.webp" alt="Portrait series number 5, marble statue study" /></div>
+          <img src="assets/img/frame-oval.webp" alt="" class="framed__frame" />
+          <figcaption class="plaque"><b>"portrait series #5"</b>2025 · original artwork</figcaption>
+        </figure>
+        <figure class="framed framed--wood" style="--l:11.2%;--r:11.2%;--t:10.7%;--b:10.7%">
+          <div class="framed__art"><img src="assets/img/art-girl.webp" alt="Portrait series number 9, woman with a bob" /></div>
+          <img src="assets/img/frame-wood.webp" alt="" class="framed__frame" />
+          <figcaption class="plaque"><b>"portrait series #9"</b>2025 · original artwork</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ 08 ADDITIONAL ============ -->
+    <section class="room more" id="additional" data-room="8" data-chapter="08|additional works">
+      <header class="room__head room__head--right">
+        <span class="room__num">08</span>
+        <h2 class="h-room"><span class="split">additional works</span></h2>
+        <p class="room__desc">Traditional artworks in charcoal and gouache, plus personal digital pieces.</p>
+      </header>
+      <div class="collage">
+        <figure class="parallax" data-speed="0.15" data-cursor="view"><img src="assets/img/add-sketch.webp" alt="Charcoal portrait sketch" /><figcaption>charcoal</figcaption></figure>
+        <figure class="parallax" data-speed="-0.1" data-cursor="view"><img src="assets/img/add-tree.webp" alt="Gouache painting of a lone tree" /><figcaption>gouache</figcaption></figure>
+        <figure class="parallax" data-speed="0.25" data-cursor="view"><img src="assets/img/add-peak.webp" alt="Digital painting of a snowy mountain peak at sunset" /><figcaption>digital</figcaption></figure>
+        <figure class="parallax" data-speed="-0.2" data-cursor="view"><img src="assets/img/add-mantis.webp" alt="Digital painting of a mantis on machinery" /><figcaption>digital</figcaption></figure>
+        <figure class="parallax" data-speed="0.08" data-cursor="view"><img src="assets/img/add-card.webp" alt="Miniature painting held among leaves" /><figcaption>gouache, miniature</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact" data-chapter="✶|say hello">
+      <canvas class="stars" id="stars2"></canvas>
+      <img src="assets/img/zay-small.webp" alt="" class="contact__zay" />
+      <h2 class="contact__title">
+        <span class="line"><span class="split">reach out</span></span>
+        <span class="line"><span class="split">to me<b class="red">.</b></span></span>
+      </h2>
+      <button class="contact__email magnetic" id="copyEmail" data-cursor="copy">
+        <span>zahrahbiju@gmail.com</span><small>click to copy</small>
+      </button>
+      <div class="contact__grid">
+        <div><p class="label">address</p><p>2145 Sydney,<br />NSW, Australia</p></div>
+        <div><p class="label">email</p><p><a href="mailto:zahrahbiju@gmail.com" data-cursor="✉">zahrahbiju@gmail.com</a></p></div>
+        <div><p class="label">open to</p><p>design, content &amp;<br />marketing roles</p></div>
+      </div>
+      <div class="marquee marquee--outline" aria-hidden="true">
+        <div class="marquee__track">
+          <span>let's collaborate ✶ let's collaborate ✶ let's collaborate ✶ </span>
+          <span>let's collaborate ✶ let's collaborate ✶ let's collaborate ✶ </span>
+        </div>
+      </div>
+      <footer class="footer">
+        <span>© 2026 Fareeha Zahrah</span>
+        <span>made with coffee, curiosity &amp; a lot of red</span>
+        <a href="#top" data-cursor="up">back to top ↑</a>
+      </footer>
+    </section>
+  </main>
+
+  <!-- lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" aria-label="Close" data-cursor="close">✕</button>
+    <img alt="" />
+    <p class="lightbox__cap"></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
